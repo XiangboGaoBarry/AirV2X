@@ -1,0 +1,193 @@
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic typography and layout */
+body {
+  color: #000 !important;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Fixed cover image that stays in view while scrolling */
+.cover-image {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-image: url('../images/LangCoop_w_icon.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Key property for scroll effect */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.cover-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Initial view container - controls how much of image is initially visible */
+.initial-view {
+  height: 20vh; /* Initial visible height */
+  position: relative;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+/* Content positioning */
+.content-wrapper {
+  position: relative;
+  background: #fff;
+  z-index: 10;
+}
+
+/* Override Bulma section spacing */
+.section {
+  padding: 0 !important; /* Override Bulma's default padding */
+}
+
+.section.is-light {
+  background: #fff;
+  margin: 0; /* No margin */
+  padding-bottom: 60px !important; /* Only bottom padding */
+}
+
+/* Custom spacing for content */
+.section.is-light > .columns:first-child {
+  padding-top: 20px; /* Add spacing inside first content section */
+}
+
+.main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.gradient-colorful {
+  background: linear-gradient(45deg, #FF4500, #FFA500, #00CED1, #4169E1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 300%;
+  animation: gradient-shift 5s ease infinite;
+}
+
+.subtitle {
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 700;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.publication-authors {
+  margin: 10px 0;
+}
+
+.author-block {
+  margin: 0 5px;
+}
+
+.link-block {
+  margin: 10px;
+}
+
+/* Video containers */
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+.video-container:hover {
+  transform: translateY(-5px);
+}
+.video-container video {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Titles within the content sections */
+.sub-sub-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Container spacing adjustments */
+.container.is-max-desktop {
+  max-width: 960px !important;
+}
+
+.container.is-width-screen {
+  max-width: 1140px !important;
+}
+
+.anonymity {
+  display: none;
+}
+
+/* Fix for any Bulma-specific margins */
+.columns {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Hero adjustments */
+.hero {
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll down indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  animation: bounce 2s infinite;
+  z-index: 5;
+}
+
+.scroll-indicator i {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-15px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-7px) translateX(-50%);
+  }
+}

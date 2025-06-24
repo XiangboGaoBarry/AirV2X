@@ -1,0 +1,346 @@
+<div class="content-wrapper">
+<section id="results" class="section is-light">
+  <!-- Title -->
+  <div class="columns is-centered">
+    <div class="column has-text-centered">
+      <div class="subtitle">
+        <!-- <img src="./static/images/icon.png" alt="icon" style="height: 5em; vertical-align: middle; margin-right: 8px;"> -->
+        <span class="main-title gradient-colorful">AirV2X:</span> Unified Air-Ground Vehicle-to-Everything Collaboration
+      </div>
+    </div>
+  </div>
+
+  <!-- Conference & Authors -->
+  <div class="hero">
+    <!-- <div class="hero-body"> -->
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="sub-sub-title gradient-colorful">
+              <!-- <a href="">CVPRW 2025</a> -->
+            </div>
+            <!-- anonymity -->
+            <div class="is-size-5 publication-authors">  
+              <span class="author-block">
+                <a href="https://www.xiangbogao.com/">Xiangbo Gao</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://wyhallenwu.github.io/">Yuheng Wu</a><sup>2</sup>,
+                <!-- Yuheng Wu <sup>2</sup>, -->
+              </span>
+              <span class="author-block">
+                <!-- <a href="">Jiachen Li</a><sup>3</sup>, -->
+                Xuewen Luo <sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <!-- <a href="">Ziran Wang</a><sup>4</sup>, -->
+                Keshu Wu <sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <!-- <a href="">Zhiwen Fan</a><sup>5</sup>, -->
+                Xinghao Chen <sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <!-- <a href="">Zhiwen Fan</a><sup>5</sup>, -->
+                Yuping Wang <sup>5</sup>,
+              </span>
+              <span class="author-block">
+                <!-- <a href="">Zhiwen Fan</a><sup>5</sup>, -->
+                Chenxi Liu <sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <!-- <a href="">Zhiwen Fan</a><sup>5</sup>, -->
+                Yang Zhou <sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://taco-group.github.io/index.html">Zhengzhong Tu</a><sup>1,*</sup>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Texas A&M University</span>
+              <span class="author-block"><sup>2</sup>KAIST</span>
+              <span class="author-block"><sup>3</sup>University of Utah</span>
+              <span class="author-block"><sup>3</sup>University of Washington</span>
+              <span class="author-block"><sup>3</sup>University of Michigan</span>
+            </div>
+
+            <!-- Paper & Code Links -->
+            <div class="column has-text-centered">
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/taco-group/AirV2X-Perception" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/xiangbog/AirV2X-Perception" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span>
+              <span class="link-block anonymity">
+                <a href="https://www.youtube.com/watch?v=OlQDg7EMWrE"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-video"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+
+  <!-- Video Examples -->
+  <!-- <div class="container is-width-screen anonymity">
+
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 1</span>
+        </div>
+        <div class="video-container">
+          <video id="video1" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v5_0_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 2</span>
+        </div>
+        <div class="video-container">
+          <video id="video2" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v5_1_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 1</span>
+        </div>
+        <div class="video-container">
+          <video id="video1" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v6_0_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 2</span>
+        </div>
+        <div class="video-container">
+          <video id="video2" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v6_1_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 1</span>
+        </div>
+        <div class="video-container">
+          <video id="video1" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v1_0_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 2</span>
+        </div>
+        <div class="video-container">
+          <video id="video2" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v1_1_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 1</span>
+        </div>
+        <div class="video-container">
+          <video id="video3" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v3_0_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 2</span>
+        </div>
+        <div class="video-container">
+          <video id="video4" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v3_1_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 1</span>
+        </div>
+        <div class="video-container">
+          <video id="video3" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v4_0_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 2</span>
+        </div>
+        <div class="video-container">
+          <video id="video4" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v4_1_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 1</span>
+        </div>
+        <div class="video-container">
+          <video id="video3" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v2_0_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="sub-sub-title">
+          <span style="color: #7e56d0;">CAV 2</span>
+        </div>
+        <div class="video-container">
+          <video id="video4" controls autoplay loop muted preload="auto">
+            <source src="static/videos/v2_1_slow_downscale_hevc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  
+
+  <br><br><br>
+
+  <!-- Abstract, Pipeline, Results -->
+  <div class="container is-max-desktop">
+    <h2 class="subtitle is-3 has-text-centered">Abstract</h2>
+    <div class="content">
+      <p>
+        While multi-vehicular collaborative driving demonstrates clear advantages over single-vehicle autonomy, traditional infrastructure-based V2X systems remain constrained by substantial deployment costs and the creation of "uncovered danger zones" in rural and suburban areas. We present AirV2X-Perception, a large-scale dataset that leverages Unmanned Aerial Vehicles (UAVs) as a flexible alternative or complement to fixed Road-Side Units (RSUs). Drones offer unique advantages over ground-based perception: complementary bird's-eye-views that reduce occlusions, dynamic positioning capabilities that enable hovering, patrolling, and escorting navigation rules, and significantly lower deployment costs compared to fixed infrastructure. Our dataset comprises 6.73 hours of drone-assisted driving scenarios across urban, suburban, and rural environments with varied weather and lighting conditions. The AirV2X-Perception dataset facilitates the development and standardized evaluation of Vehicle-to-Drone (V2D) algorithms, addressing a critical gap in the rapidly expanding field of aerial-assisted autonomous driving systems.
+      </p>
+    </div>
+
+    <h2 class="subtitle is-3 has-text-centered">Motivation</h2>
+    <div class="content">
+      <!-- <p>STAMP allows agents to share feature maps in the protocal representation and keep the original local feature maps secure.</p> -->
+      <ul>
+        <li> Drones offer a unique and complementary perception perspective. </li>
+        <li> Drones provide superior operational adaptability and flexibility. </li>
+        <li> Drone solutions present a more cost-effective approach to expanding coverage. </li>
+        <li> V2D systems can be integrated with emerging aerial networks. </li>
+      </ul>
+    </div>
+
+    <h2 class="subtitle is-3 has-text-centered">Diverse Environmental Scenarios</h2>
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <img src="./static/images/diversity.png" alt="environmental scenarios" class="image is-fullwidth">
+      </div>
+    </div>
+
+
+    <h2 class="subtitle is-3 has-text-centered">Drone Navigation</h2>
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <img src="./static/images/drone_nav.png" alt="drone navigation" class="image is-fullwidth">
+      </div>
+    </div>
+
+
+    <h2 class="subtitle is-3 has-text-centered">Sensor Setup</h2>
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <img src="./static/images/sensor_setup.png" alt="sensor setup" class="image is-fullwidth">
+      </div>
+    </div>
+
+
+  </div>
+
+  <br><br><br>
+
+  <!-- Our Vision -->
+  <div class="hero-body anonymity">
+    <div class="container is-max-desktop">
+      <h2 class="subtitle is-3 has-text-centered">Our Vision</h2>
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <img src="./static/images/multi_group_sys.png" alt="multi-group system" class="image is-fullwidth">
+        </div>
+      </div>
+      <div class="content">
+        <p>
+          Our proposed STAMP framework effectively addresses these limitations, offering a scalable solution for multi-group collaborative perception. The key innovation lies in its lightweight adapter and reverter pair (approximately 1MB) required for each collaboration group an agent joins. This efficient design enables agents to equip multiple adapter-reverter pairs, facilitating seamless participation in various groups without significant computational overhead. The minimal memory footprint ensures scalability, even as agents join numerous collaboration groups, making STAMP particularly well-suited for multi-group and multi-model collaboration systems.
+        </p>
+        <p>
+          We can distinguish between three collaborative system types:
+        </p>
+        <ul>
+          <li>Single-group systems, where agents either operate independently or are compelled to collaborate with all others, are susceptible to performance bottlenecks caused by inferior agents and vulnerabilities introduced by malicious attackers. </li>
+          <li>Multi-group single-model systems, allowing multiple collaboration groups but restricting agents to a single group because each agent can only equip a single model.</li>
+          <li>Multi-group multi-model systems enabling agents to join multiple groups if they meet the predefined standards.</li>
+        </ul>
+        <p>
+          The multi-group structure offers significant advantages over traditional single-group systems. It enhances agents' potential for diverse collaborations, consequently improving overall performance. This approach mitigates the bottleneck effect by allowing high-performing agents to maintain efficiency within groups of similar capability while potentially assisting less capable agents in other groups. Furthermore, it enhances system flexibility, enabling dynamic group formation based on specific task requirements or environmental conditions.
+        </p>
+        <p>
+          However, implementing such a multi-group system poses challenges for existing heterogeneous collaborative pipelines. End-to-end training approaches require simultaneous training of all models, conflicting with the concept of distinct collaboration groups. Methods that require separate encoders for each group become impractical as the number of groups increases due to computational and memory constraints.
+        </p>
+        <p>
+          Our proposed STAMP framework effectively addresses these limitations offering a scalable solution for multi-group collaborative perception. The key innovation lies in its lightweight adapter and reverter pair (approximately 1MB) required for each collaboration group an agent joins. This efficient design enables agents to equip multiple adapter-reverter pairs, facilitating seamless participation in various groups without significant computational overhead. The minimal memory footprint ensures scalability, even as agents join numerous collaboration groups, making STAMP particularly well-suited for multi-group and multi-model collaboration systems.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
