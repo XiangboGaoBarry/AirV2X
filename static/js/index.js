@@ -144,10 +144,68 @@
       .then(data => {
         document.getElementById('section-placeholder').innerHTML = data;
   
-        // 在内容加载并插入后，初始化视频切换功能
-        // initVideoSwitching();
+        // 在内容加载并插入后，初始化视频功能
+        initVideoHandling();
       })
       .catch(error => console.error('Error loading the section:', error));
   });
+
+  // GIF点击播放视频功能
+  function initVideoHandling() {
+    const videoContainers = document.querySelectorAll('.video-demo-container');
+    
+    videoContainers.forEach(container => {
+      container.addEventListener('click', function() {
+        const videoSrc = this.getAttribute('data-video');
+        if (videoSrc) {
+          openVideoModal(videoSrc);
+        }
+      });
+    });
+  }
+
+  // 创建视频模态框
+  function openVideoModal(videoSrc) {
+    // 创建模态框
+    const modal = document.createElement('div');
+    modal.className = 'modal is-active video-modal';
+    modal.innerHTML = `
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="video-wrapper">
+          <video controls autoplay preload="metadata" playsinline>
+            <source src="${videoSrc}" type="video/mp4">
+            <p>Your browser does not support the video tag. <a href="${videoSrc}" target="_blank">Download the video</a> to view it.</p>
+          </video>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    `;
+
+    // 添加到页面
+    document.body.appendChild(modal);
+
+    // 添加关闭事件
+    const closeButton = modal.querySelector('.modal-close');
+    const modalBackground = modal.querySelector('.modal-background');
+    
+    function closeModal() {
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+      }
+      document.body.removeChild(modal);
+    }
+
+    closeButton.addEventListener('click', closeModal);
+    modalBackground.addEventListener('click', closeModal);
+    
+    // ESC键关闭
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && document.body.contains(modal)) {
+        closeModal();
+      }
+    });
+  }
 
   

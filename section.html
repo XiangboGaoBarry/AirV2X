@@ -1,10 +1,10 @@
 <div class="content-wrapper">
-<section id="results" class="section is-light">
+<section id="results" class="section is-light hero-section">
   <!-- Title -->
   <div class="columns is-centered">
     <div class="column has-text-centered">
       <div class="subtitle">
-        <!-- <img src="./static/images/icon.png" alt="icon" style="height: 5em; vertical-align: middle; margin-right: 8px;"> -->
+        <img src="./static/images/icon.png" alt="icon" style="height: 5em; vertical-align: middle; margin-right: 8px;">
         <span class="main-title gradient-colorful">AirV2X:</span> Unified Air-Ground Vehicle-to-Everything Collaboration
       </div>
     </div>
@@ -262,15 +262,20 @@
   <br><br><br>
 
   <!-- Abstract, Pipeline, Results -->
+<section class="abstract-section">
   <div class="container is-max-desktop">
-    <h2 class="subtitle is-3 has-text-centered">Abstract</h2>
+    <h2 class="sub-sub-title has-text-centered">Abstract</h2>
     <div class="content">
       <p>
         While multi-vehicular collaborative driving demonstrates clear advantages over single-vehicle autonomy, traditional infrastructure-based V2X systems remain constrained by substantial deployment costs and the creation of "uncovered danger zones" in rural and suburban areas. We present AirV2X-Perception, a large-scale dataset that leverages Unmanned Aerial Vehicles (UAVs) as a flexible alternative or complement to fixed Road-Side Units (RSUs). Drones offer unique advantages over ground-based perception: complementary bird's-eye-views that reduce occlusions, dynamic positioning capabilities that enable hovering, patrolling, and escorting navigation rules, and significantly lower deployment costs compared to fixed infrastructure. Our dataset comprises 6.73 hours of drone-assisted driving scenarios across urban, suburban, and rural environments with varied weather and lighting conditions. The AirV2X-Perception dataset facilitates the development and standardized evaluation of Vehicle-to-Drone (V2D) algorithms, addressing a critical gap in the rapidly expanding field of aerial-assisted autonomous driving systems.
       </p>
     </div>
+  </div>
+</section>
 
-    <h2 class="subtitle is-3 has-text-centered">Motivation</h2>
+<section class="motivation-section">
+  <div class="container is-max-desktop">
+    <h2 class="sub-sub-title has-text-centered">Motivation</h2>
     <div class="content">
       <!-- <p>STAMP allows agents to share feature maps in the protocal representation and keep the original local feature maps secure.</p> -->
       <ul>
@@ -280,67 +285,121 @@
         <li> V2D systems can be integrated with emerging aerial networks. </li>
       </ul>
     </div>
+  </div>
+</section>
 
-    <h2 class="subtitle is-3 has-text-centered">Diverse Environmental Scenarios</h2>
+<section class="video-grid-section">
+  <div class="container is-max-desktop">
+    <h2 class="sub-sub-title has-text-centered">Multiple Types of Agents</h2>
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <div class="video-demo-container" data-video="./static/videos/drone.mp4">
+            <div class="gif-preview">
+              <img src="./static/videos/drone.gif" alt="Drone Perspective" class="demo-gif">
+            </div>
+            <div class="video-demo-title">Drone Perspective</div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="video-demo-container" data-video="./static/videos/rsu.mp4">
+            <div class="gif-preview">
+              <img src="./static/videos/rsu.gif" alt="RSU Perspective" class="demo-gif">
+            </div>
+            <div class="video-demo-title">RSU Perspective</div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="video-demo-container" data-video="./static/videos/vehicle.mp4">
+            <div class="gif-preview">
+              <img src="./static/videos/vehicle.gif" alt="Vehicle Perspective" class="demo-gif">
+            </div>
+            <div class="video-demo-title">Vehicle Perspective</div>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <div class="video-demo-container" data-video="./static/videos/drone2.mp4">
+            <div class="gif-preview">
+              <img src="./static/videos/drone2.gif" alt="Drone Perspective 2" class="demo-gif">
+            </div>
+            <div class="video-demo-title">Drone Perspective 2</div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="video-demo-container" data-video="./static/videos/rsu2.mp4">
+            <div class="gif-preview">
+              <img src="./static/videos/rsu2.gif" alt="RSU Perspective 2" class="demo-gif">
+            </div>
+            <div class="video-demo-title">RSU Perspective 2</div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="video-demo-container" data-video="./static/videos/vehicle2.mp4">
+            <div class="gif-preview">
+              <img src="./static/videos/vehicle2.gif" alt="Vehicle Perspective 2" class="demo-gif">
+            </div>
+            <div class="video-demo-title">Vehicle Perspective 2</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="image-gallery-section">
+  <div class="container is-max-desktop">
+    <h2 class="sub-sub-title has-text-centered">Diverse Environmental Scenarios</h2>
     <div class="columns is-centered">
       <div class="column is-full">
         <img src="./static/images/diversity.png" alt="environmental scenarios" class="image is-fullwidth">
       </div>
     </div>
+  </div>
+</section>
 
-
-    <h2 class="subtitle is-3 has-text-centered">Drone Navigation</h2>
+<section class="standard-section">
+  <div class="container is-max-desktop">
+    <h2 class="sub-sub-title has-text-centered">Drone Navigation</h2>
     <div class="columns is-centered">
       <div class="column is-full">
         <img src="./static/images/drone_nav.png" alt="drone navigation" class="image is-fullwidth">
       </div>
     </div>
+  </div>
+</section>
 
-
-    <h2 class="subtitle is-3 has-text-centered">Sensor Setup</h2>
+<section class="card-section">
+  <div class="container is-max-desktop">
+    <h2 class="sub-sub-title has-text-centered">Sensor Setup</h2>
     <div class="columns is-centered">
       <div class="column is-full">
         <img src="./static/images/sensor_setup.png" alt="sensor setup" class="image is-fullwidth">
       </div>
     </div>
-
-
   </div>
+</section>
 
-  <br><br><br>
-
-  <!-- Our Vision -->
-  <div class="hero-body anonymity">
+  <!-- BibTeX Citation Section -->
+  <section class="citation-section">
     <div class="container is-max-desktop">
-      <h2 class="subtitle is-3 has-text-centered">Our Vision</h2>
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <img src="./static/images/multi_group_sys.png" alt="multi-group system" class="image is-fullwidth">
+      <h2 class="sub-sub-title has-text-centered">Citation</h2>
+      <div class="citation-container">
+        <div class="citation-header">
+          <i class="fas fa-quote-left"></i>
+          <span>BibTeX</span>
+          <button class="copy-button" onclick="copyToClipboard()">
+            <i class="fas fa-copy"></i>
+            <span>Copy</span>
+          </button>
         </div>
-      </div>
-      <div class="content">
-        <p>
-          Our proposed STAMP framework effectively addresses these limitations, offering a scalable solution for multi-group collaborative perception. The key innovation lies in its lightweight adapter and reverter pair (approximately 1MB) required for each collaboration group an agent joins. This efficient design enables agents to equip multiple adapter-reverter pairs, facilitating seamless participation in various groups without significant computational overhead. The minimal memory footprint ensures scalability, even as agents join numerous collaboration groups, making STAMP particularly well-suited for multi-group and multi-model collaboration systems.
-        </p>
-        <p>
-          We can distinguish between three collaborative system types:
-        </p>
-        <ul>
-          <li>Single-group systems, where agents either operate independently or are compelled to collaborate with all others, are susceptible to performance bottlenecks caused by inferior agents and vulnerabilities introduced by malicious attackers. </li>
-          <li>Multi-group single-model systems, allowing multiple collaboration groups but restricting agents to a single group because each agent can only equip a single model.</li>
-          <li>Multi-group multi-model systems enabling agents to join multiple groups if they meet the predefined standards.</li>
-        </ul>
-        <p>
-          The multi-group structure offers significant advantages over traditional single-group systems. It enhances agents' potential for diverse collaborations, consequently improving overall performance. This approach mitigates the bottleneck effect by allowing high-performing agents to maintain efficiency within groups of similar capability while potentially assisting less capable agents in other groups. Furthermore, it enhances system flexibility, enabling dynamic group formation based on specific task requirements or environmental conditions.
-        </p>
-        <p>
-          However, implementing such a multi-group system poses challenges for existing heterogeneous collaborative pipelines. End-to-end training approaches require simultaneous training of all models, conflicting with the concept of distinct collaboration groups. Methods that require separate encoders for each group become impractical as the number of groups increases due to computational and memory constraints.
-        </p>
-        <p>
-          Our proposed STAMP framework effectively addresses these limitations offering a scalable solution for multi-group collaborative perception. The key innovation lies in its lightweight adapter and reverter pair (approximately 1MB) required for each collaboration group an agent joins. This efficient design enables agents to equip multiple adapter-reverter pairs, facilitating seamless participation in various groups without significant computational overhead. The minimal memory footprint ensures scalability, even as agents join numerous collaboration groups, making STAMP particularly well-suited for multi-group and multi-model collaboration systems.
-        </p>
+        <pre class="citation-text" id="citation-text">@article{gao2025airv2x,
+  title={AirV2X: Unified Air-Ground Vehicle-to-Everything Collaboration},
+  author={Gao, Xiangbo and Wu, Yuheng and Luo, Xuewen and Wu, Keshu and Chen, Xinghao and Wang, Yuping and Liu, Chenxi and Zhou, Yang and Tu, Zhengzhong},
+  journal={arXiv preprint arXiv:2506.19283},
+  year={2025}
+}</pre>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 </div>

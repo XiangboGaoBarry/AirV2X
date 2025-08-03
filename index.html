@@ -6,7 +6,7 @@
   <title>AirV2X</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -28,9 +28,10 @@
 
 
 <body>
-  <div class="initial-view anonymity">
+  <div class="initial-view">
     <!-- Cover image with fixed attachment for scroll effect -->
     <div class="cover-image">
+      <img src="./static/videos/cover_drone.gif" alt="AirV2X Drone Perspective" class="cover-gif" onclick="openCoverVideo()" style="cursor: pointer;">
       <div class="cover-overlay"></div>
       <!-- Scroll indicator -->
       <div class="scroll-indicator">
@@ -42,14 +43,106 @@
 
 <script src="static/js/index.js"></script>
 
-<!-- <script>
+<script>
   window.addEventListener('scroll', function () {
     const iv = document.querySelector('.initial-view');
     if (window.scrollY > 10) {
       iv.style.height = '100vh'; // 展开到全图
     }
   });
-</script> -->
+
+  // Cover video click functionality
+  function openCoverVideo() {
+    openVideoModal('./static/videos/drone.mp4');
+  }
+
+  // Copy citation to clipboard
+  function copyToClipboard() {
+    const citationText = document.getElementById('citation-text').textContent;
+    const copyButton = document.querySelector('.copy-button span');
+    
+    navigator.clipboard.writeText(citationText).then(function() {
+      // Success feedback
+      const originalText = copyButton.textContent;
+      copyButton.textContent = 'Copied!';
+      copyButton.style.color = '#4CAF50';
+      
+      setTimeout(function() {
+        copyButton.textContent = originalText;
+        copyButton.style.color = '';
+      }, 2000);
+    }).catch(function(err) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = citationText;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      
+      try {
+        document.execCommand('copy');
+        copyButton.textContent = 'Copied!';
+        copyButton.style.color = '#4CAF50';
+        
+        setTimeout(function() {
+          copyButton.textContent = 'Copy';
+          copyButton.style.color = '';
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+      
+      document.body.removeChild(textArea);
+    });
+  }
+
+  // Video modal function (using same function as the demo videos)
+  function openVideoModal(videoSrc) {
+    // Create modal
+    const modal = document.createElement('div');
+    modal.className = 'modal is-active video-modal';
+    modal.innerHTML = `
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="video-wrapper">
+          <video controls autoplay preload="metadata" playsinline>
+            <source src="${videoSrc}" type="video/mp4">
+            <p>Your browser does not support the video tag. <a href="${videoSrc}" target="_blank">Download the video</a> to view it.</p>
+          </video>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    `;
+
+    // Add to page
+    document.body.appendChild(modal);
+
+    // Add close events
+    const closeButton = modal.querySelector('.modal-close');
+    const modalBackground = modal.querySelector('.modal-background');
+    
+    function closeModal() {
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+      }
+      document.body.removeChild(modal);
+    }
+
+    closeButton.addEventListener('click', closeModal);
+    modalBackground.addEventListener('click', closeModal);
+    
+    // ESC key close
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && document.body.contains(modal)) {
+        closeModal();
+      }
+    });
+  }
+</script>
 
 
 </body>
